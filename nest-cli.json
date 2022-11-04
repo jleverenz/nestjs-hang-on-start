@@ -1,5 +1,31 @@
 {
   "$schema": "https://json.schemastore.org/nest-cli",
   "collection": "@nestjs/schematics",
-  "sourceRoot": "src"
+  "sourceRoot": "apps/nestjs-hang-on-start/src",
+  "monorepo": true,
+  "root": "apps/nestjs-hang-on-start",
+  "compilerOptions": {
+    "webpack": true,
+    "tsConfigPath": "apps/nestjs-hang-on-start/tsconfig.app.json"
+  },
+  "projects": {
+    "nestjs-hang-on-start": {
+      "type": "application",
+      "root": "apps/nestjs-hang-on-start",
+      "entryFile": "main",
+      "sourceRoot": "apps/nestjs-hang-on-start/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/nestjs-hang-on-start/tsconfig.app.json"
+      }
+    },
+    "cli-test": {
+      "type": "application",
+      "root": "apps/cli-test",
+      "entryFile": "main",
+      "sourceRoot": "apps/cli-test/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/cli-test/tsconfig.app.json"
+      }
+    }
+  }
 }
