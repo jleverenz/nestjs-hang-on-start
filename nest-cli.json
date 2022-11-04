@@ -6,7 +6,8 @@
   "root": "apps/nestjs-hang-on-start",
   "compilerOptions": {
     "webpack": true,
-    "tsConfigPath": "apps/nestjs-hang-on-start/tsconfig.app.json"
+    "tsConfigPath": "apps/nestjs-hang-on-start/tsconfig.app.json",
+    "assets": ["**/*.hbs"]
   },
   "projects": {
     "nestjs-hang-on-start": {
